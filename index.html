@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Connect - Your University Marketplace</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,401,500,701,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <style>
         * {
             margin: 0;
@@ -24,7 +26,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Satoshi', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #212121 0%, #212121 100%);
             color: var(--text);
             overflow-x: hidden;
@@ -295,7 +297,7 @@
             background: #212121;
             border-radius: 30px;
             overflow: hidden;
-            aspect-ratio: 9/19.5;
+            aspect-ratio: 9/19.8;
             position: relative;
 
         }
@@ -761,6 +763,70 @@
             }
         }
 
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-item details {
+            padding: 1.5rem;
+        }
+
+        .faq-item summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text);
+            list-style: none;
+            transition: color 0.3s ease;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary:hover {
+            color: #fff;
+        }
+
+        .faq-item summary::after {
+            content: '▼';
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item details[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            margin-top: 1rem;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
         /* Scroll Reveal */
         .reveal {
             opacity: 0;
@@ -909,6 +975,132 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-header reveal">
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about Campus Connect</p>
+        </div>
+        <div class="faq-container">
+            <!-- FAQ 1 -->
+            <div class="faq-item glass reveal">
+                <details>
+                    <summary>How do I sign up for Campus Connect?</summary>
+                    <div class="faq-answer">
+                        Sign up is easy! Download the app, create an account using your university email address, and
+                        verify your student status. This ensures all users are part of your campus community.
+                    </div>
+                </details>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item glass reveal">
+                <details>
+                    <summary>Is Campus Connect available on iPhone?</summary>
+                    <div class="faq-answer">
+                        Yes! You can access Campus Connect on iPhone through our web app. Simply open the site in Safari
+                        and tap "Add to Home Screen" for a native app-like experience. The Android app is also available
+                        for download.
+                    </div>
+                </details>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item glass reveal">
+                <details>
+                    <summary>How do I list an item for sale?</summary>
+                    <div class="faq-answer">
+                        Listing items is simple! Tap the "+" button, upload photos of your item, add a title and
+                        description, set your price, and publish. Your listing will be visible to all verified students
+                        in your university.
+                    </div>
+                </details>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item glass reveal">
+                <details>
+                    <summary>How does the messaging system work?</summary>
+                    <div class="faq-answer">
+                        When you're interested in an item, you can message the seller directly through the app. All
+                        conversations are secure and stay within Campus Connect. You'll receive notifications when
+                        someone replies to your messages.
+                    </div>
+                </details>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item glass reveal">
+                <details>
+                    <summary>Are there any fees for buying or selling?</summary>
+                    <div class="faq-answer">
+                        No! Campus Connect is completely free to use. There are no listing fees, transaction fees, or
+                        hidden charges. We believe students should be able to trade freely within their community.
+                    </div>
+                </details>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="faq-item glass reveal">
+                <details>
+                    <summary>How do I arrange a safe meetup?</summary>
+                    <div class="faq-answer">
+                        We recommend meeting in public places on campus during daytime hours. The app provides suggested
+                        meeting locations and safety tips. Always bring a friend if possible, and trust your instincts.
+                    </div>
+                </details>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="faq-item glass reveal">
+                <details>
+                    <summary>What items can I sell on Campus Connect?</summary>
+                    <div class="faq-answer">
+                        You can sell textbooks, electronics, furniture, clothing, sports equipment, and more. Items must
+                        be legal and comply with university policies. Prohibited items include weapons, drugs, and
+                        counterfeit goods.
+                    </div>
+                </details>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="faq-item glass reveal">
+                <details>
+                    <summary>How does the rating system work?</summary>
+                    <div class="faq-answer">
+                        After completing a transaction, both buyers and sellers can rate each other. Build your
+                        reputation by being responsive, honest, and reliable. A good rating helps other students trust
+                        you for future trades.
+                    </div>
+                </details>
+            </div>
+
+            <!-- FAQ 9 -->
+            <div class="faq-item glass reveal">
+                <details>
+                    <summary>Can I report inappropriate content or users?</summary>
+                    <div class="faq-answer">
+                        Yes. If you encounter inappropriate listings, scams, or suspicious behavior, you can report them
+                        directly through the app. Our team reviews all reports and takes appropriate action to keep the
+                        community safe.
+                    </div>
+                </details>
+            </div>
+
+            <!-- FAQ 10 -->
+            <div class="faq-item glass reveal">
+                <details>
+                    <summary>How do I contact support?</summary>
+                    <div class="faq-answer">
+                        For support inquiries, use the "Contact Us" feature in the app or email us at
+                        support@campusconnect.com. We typically respond within 24 hours. Check our Help Center for
+                        instant answers to common questions.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section" id="download">
         <div class="cta-container glass reveal">
@@ -958,7 +1150,7 @@
     <!-- Android Download Modal -->
     <div id="androidModal" class="modal-backdrop" onclick="closeAndroidModal(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
-            <!-- <div class="modal-header-image" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fesconnecthub-site.firebasestorage.app/o/app_file%2Fic_launcher-playstore.png?alt=media&token=c02a7274-8705-4516-88ef-a50687a90588');"></div> -->
+            <!-- <div class="modal-header-image" style="background-image: url('fes-icon.jpg');"></div> -->
             <div class="modal-body">
                 <h1 class="modal-title">Campus Connect</h1>
                 <p class="modal-version">Version 1.0.0</p>
@@ -1018,7 +1210,8 @@
                 </div>
 
                 <button class="modal-button">
-                    <a href="https://fes-marketplace.web.app/" target="_blank" class="web-modal-link">Go to Web App</a>
+                    <a href="https://fes-marketplace.web.app/" target="_blank" class="web-modal-link">Go to Web
+                        App</a>
                 </button>
             </div>
         </div>
