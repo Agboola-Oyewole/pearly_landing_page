@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Peerly</title>
+    <meta name="description" content="Peerly Terms of Service — the terms that govern your use of the Peerly campus marketplace.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="app_icon.png">
+
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,401,500,701,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0b0b0c;
+            --bg-soft: #141416;
+            --surface: rgba(255, 255, 255, 0.045);
+            --surface-hover: rgba(255, 255, 255, 0.08);
+            --border: rgba(255, 255, 255, 0.1);
+            --border-strong: rgba(255, 255, 255, 0.18);
+            --text: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --accent: #ffffff;
+            --radius: 18px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Satoshi', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        ::selection {
+            background: #fff;
+            color: #000;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.14;
+            background: #ffffff;
+        }
+
+        .orb-1 {
+            width: 520px;
+            height: 520px;
+            top: -240px;
+            left: -200px;
+        }
+
+        .orb-2 {
+            width: 420px;
+            height: 420px;
+            bottom: -200px;
+            right: -180px;
+        }
+
+        .grid-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+            background-size: 64px 64px;
+            mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 80%);
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(11, 11, 12, 0.7);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .brand img {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+        }
+
+        .brand .logo {
+            font-weight: 900;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .back-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--text);
+        }
+
+        /* Content */
+        .legal-wrap {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem 5rem;
+        }
+
+        .legal-header h1 {
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.6rem;
+        }
+
+        .legal-meta {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .legal-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: clamp(1.5rem, 4vw, 2.75rem);
+        }
+
+        .legal-section {
+            padding: 1.4rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .legal-section:first-child {
+            padding-top: 0;
+        }
+
+        .legal-section:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .legal-section h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.6rem;
+        }
+
+        .legal-section p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .legal-section a {
+            color: var(--text);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .legal-note {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            opacity: 0.7;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+    <div class="grid-overlay"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="peerly-mark-white-1024.png" alt="Peerly logo">
+                <span class="logo">Peerly</span>
+            </a>
+            <a href="index.html" class="back-link">← Back to home</a>
+        </div>
+    </nav>
+
+    <main class="legal-wrap">
+        <div class="legal-header">
+            <h1>Terms of Service</h1>
+            <p class="legal-meta">Peerly · Last updated June 17, 2026</p>
+        </div>
+
+        <div class="legal-card">
+            <section class="legal-section">
+                <h2>1. Who we are</h2>
+                <p>Peerly is a campus marketplace that lets verified students buy and sell items and offer or hire services within their university community. These Terms govern your use of the Peerly mobile and web apps (the "Service"). By creating an account or using the Service, you agree to these Terms. If you do not agree, do not use the Service.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>2. Eligibility</h2>
+                <p>You must be a current student (or member) of a supported university and at least the age of majority in your country to use Peerly as a seller. You agree to provide accurate information, including a valid university email and/or phone number where requested, and to keep it up to date. You are responsible for activity that happens under your account.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>3. Verification</h2>
+                <p>Some features require verification (for example, phone verification). Verification helps build trust but does not guarantee the identity, honesty, or reliability of any user. A "Verified" badge means a user completed the verification steps available at that time — nothing more.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>4. Listings and transactions</h2>
+                <p>Peerly is a venue that connects buyers and sellers. We are not a party to any transaction between users, do not take possession of items, and do not guarantee the quality, safety, legality, or accuracy of any listing. Buyers and sellers arrange and complete deals directly, including any payment and delivery. You are solely responsible for the transactions you enter into and for meeting in safe, public places.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>5. Payments</h2>
+                <p>Payments between users currently happen off-platform (for example, in person or via a method you both agree on). Peerly does not process, hold, or escrow funds and is not responsible for any payment, refund, chargeback, or dispute. Be cautious of anyone asking you to pay before you can inspect an item or service.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>6. Prohibited conduct and items</h2>
+                <p>You agree not to list, sell, or solicit anything illegal, stolen, counterfeit, unsafe, or prohibited by your university — including weapons, drugs, alcohol to minors, exam materials or contract-cheating services, adult content, and anything that infringes someone else's rights. You also agree not to harass, scam, spam, impersonate others, post false information, or attempt to disrupt or abuse the Service.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>7. Your content</h2>
+                <p>You keep ownership of the photos, videos, text, and other content you post. By posting, you grant Peerly a non-exclusive, worldwide, royalty-free licence to host, display, and distribute that content within the Service so it can function (for example, showing your listing to other users). You confirm you have the right to post it.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>8. Reviews and ratings</h2>
+                <p>Reviews must reflect genuine experiences. Do not post fake, paid, or retaliatory reviews, or manipulate ratings. We may remove content that violates these Terms.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>9. Suspension and termination</h2>
+                <p>We may suspend, restrict, or terminate your access at any time if you breach these Terms, create risk for the community, or for any lawful reason. You may stop using the Service and request account deletion at any time by contacting us.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>10. Disclaimers</h2>
+                <p>The Service is provided "as is" and "as available", without warranties of any kind, to the maximum extent permitted by law. We do not warrant that the Service will be uninterrupted, secure, or error-free, or that listings or users are genuine.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>11. Limitation of liability</h2>
+                <p>To the maximum extent permitted by law, Peerly and its creators are not liable for any indirect, incidental, or consequential damages, or for any loss arising from transactions or interactions between users, including loss of money, goods, or data.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>12. Changes to these Terms</h2>
+                <p>We may update these Terms from time to time. We'll update the "Last updated" date and, where appropriate, notify you in the app. Continued use after changes means you accept the updated Terms.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>13. Contact</h2>
+                <p>Questions about these Terms? Reach us at <a href="mailto:support@peerly.app">support@peerly.app</a>.</p>
+            </section>
+        </div>
+
+        <p class="legal-note">This document is a starting template tailored to a student peer-to-peer marketplace and is not a substitute for legal review.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Peerly. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
